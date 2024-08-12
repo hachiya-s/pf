@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap"
+      rel="stylesheet"
+    />
+    <title>HACHI's Portfolio Website</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Lowding画面 -->
+      <div id="loader_wrap">
+        <div class="loader"></div>
+      </div>
+
+      <!-- ヘッダー -->
+      <header id="header" class="wrapper">
+        <h1 class="site-title">
+          <img src="img/logo.png" alt="HACHI's Portfolio Website" />
+        </h1>
+        <nav>
+          <ul>
+            <li>
+              <a href="#top"><img src="img/top-nav.png" alt="TOP" /></a>
+            </li>
+            <li>
+              <a href="#about"><img src="img/about-nav.png" alt="ABOUT" /></a>
+            </li>
+            <li>
+              <a href="#works"><img src="img/works-nav.png" alt="WORKS" /></a>
+            </li>
+            <li>
+              <a href="#contact"
+                ><img src="img/contact-nav.png" alt="CONTACT"
+              /></a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <!-- TOP -->
+        <!-- <div class="welcome">
+          <img src="img/welcome2.png" alt="welcome" />
+        </div>
+
+        <div id="top">
+          <div class="home">
+            <img src="img/home.png" alt="home" />
+          </div>
+
+          <div class="present-top">
+            <img src="img/present.png" alt="present" />
+          </div> -->
+        <!-- <p class="dotgothic16-regular">あいうえお</p> -->
+        <!-- </div> -->
+
+        <div class="area js-area">
+          <div class="wrap">
+            <!-- ↓　アニメーションさせる要素 -->
+            <div class="welcome">
+              <img src="img/welcome2.png" alt="welcome" />
+            </div>
+            <div class="present">
+              <img src="img/present.png" alt="present" />
+            </div>
+            <div class="home-img">
+              <img src="img/home.png" alt="top" />
+            </div>
+            <!-- <div class="waku js-waku02"></div> -->
+            <div class="item js-item about-img">
+              <img src="img/about.png" alt="about-img" />
+              <section id="about">
+                <h2 class="dotgothic16-regular">About</h2>
+                <p class="dotgothic16-regular">
+                  当サイトをご覧いただきありがとうございます。<br />
+                  東京都内でWeb制作をしているHACHIと申します。<br />静岡県出身で、趣味は旅行、美容、ゲーム、映画・YouTube鑑賞など。わくわくするものが大好きです。<br />
+                  学生の時に出会った「物も人の心も両手であつかう」という言葉を大切にしていて、関わる方の笑顔に貢献できるよう、自分にできることを精一杯努め、丁寧にお届けします。<br />
+                  Webサイト制作、バナー制作でお力になれることがあれば、ぜひご連絡ください！
+                </p>
+              </section>
+            </div>
+            <div class="item js-item works-img">
+              <img src="img/works.png" alt="works-img" />
+            </div>
+
+            <div class="item js-item contact-img">
+              <img src="img/contact.png" alt="contact-img" />
+              <section id="contact">
+                <h2 class="dotgothic16-regular">Contact</h2>
+
+                <form>
+                  　　　<!--  テキスト -->
+                  　　　<!-- 名前 -->
+                  <div>
+                    <span class="dotgothic16-regular">お名前：</span>
+                    <input type="text" name="username" />
+                  </div>
+
+                  　　　<!-- メール -->
+                  <div>
+                    <span class="dotgothic16-regular">メール：</span>
+                    <input type="email" name="useremail" />
+                  </div>
+                  <!--  テキストエリア -->
+                  <div>
+                    <span class="dotgothic16-regular">お問い合わせ内容：</span>
+                  </div>
+                  <div>
+                    　<textarea name="message" cols="50" rows="10"></textarea>
+                  </div>
+
+                  　　　<!--  送信　-->
+                  <div class="sent">
+                    <input type="submit" value="送信" />
+                  </div>
+                </form>
+              </section>
+            </div>
+
+            <!-- ↑　アニメーションさせる要素 -->
+          </div>
+        </div>
+      </main>
+
+      <!-- フッター -->
+      <footer id="footer" class="wrapper">
+        <p>&copy; 2024 HACHI</p>
+      </footer>
+    </div>
+  </body>
+</html>
