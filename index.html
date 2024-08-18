@@ -4,18 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="style.css" />
     <title>HACHI's Portfolio Website</title>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
-    <script src="script.js"></script>
+    <!-- <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <!-- <script src="script.js"></script> -->
   </head>
   <body>
     <div class="container">
@@ -32,17 +38,23 @@
         <nav>
           <ul>
             <li>
-              <a href="#top"><img src="img/top-nav.png" alt="TOP" /></a>
+              <a href="#top"
+                ><img id="topimg" src="img/top-nav.png" alt="TOP"
+              /></a>
             </li>
             <li>
-              <a href="#about"><img src="img/about-nav.png" alt="ABOUT" /></a>
+              <a href="#about"
+                ><img id="aboutimg" src="img/about-nav.png" alt="ABOUT"
+              /></a>
             </li>
             <li>
-              <a href="#works"><img src="img/works-nav.png" alt="WORKS" /></a>
+              <a href="#works"
+                ><img id="worksimg" src="img/works-nav.png" alt="WORKS"
+              /></a>
             </li>
             <li>
-              <a href="#contact"
-                ><img src="img/contact-nav.png" alt="CONTACT"
+              <a href="#contact">
+                <img id="contactimg" src="img/contact-nav.png" alt="CONTACT"
               /></a>
             </li>
           </ul>
@@ -67,16 +79,19 @@
         <!-- </div> -->
 
         <div class="area js-area">
+          <div class="scrolldown4"><span>Scroll</span></div>
           <div class="wrap">
             <!-- ↓　アニメーションさせる要素 -->
-            <div class="welcome">
-              <img src="img/welcome2.png" alt="welcome" />
-            </div>
-            <div class="present">
-              <img src="img/present.png" alt="present" />
-            </div>
-            <div class="home-img">
-              <img src="img/home.png" alt="top" />
+            <div id="top">
+              <div class="welcome">
+                <img src="img/welcome2.png" alt="welcome" />
+              </div>
+              <div class="present">
+                <img src="img/present.png" alt="present" />
+              </div>
+              <div class="home-img">
+                <img src="img/home.png" alt="top" />
+              </div>
             </div>
             <!-- <div class="waku js-waku02"></div> -->
             <div class="item js-item about-img">
@@ -85,14 +100,27 @@
                 <h2 class="dotgothic16-regular">About</h2>
                 <p class="dotgothic16-regular">
                   当サイトをご覧いただきありがとうございます。<br />
-                  東京都内でWeb制作をしているHACHIと申します。<br />静岡県出身で、趣味は旅行、美容、ゲーム、映画・YouTube鑑賞など。わくわくするものが大好きです。<br />
+                  東京都内在住のHACHIと申します。<br />静岡県出身で、趣味は旅行、美容、ゲーム、映画・YouTube鑑賞など。わくわくするものが大好きです。<br />
                   学生の時に出会った「物も人の心も両手であつかう」という言葉を大切にしていて、関わる方の笑顔に貢献できるよう、自分にできることを精一杯努め、丁寧にお届けします。<br />
                   Webサイト制作、バナー制作でお力になれることがあれば、ぜひご連絡ください！
                 </p>
               </section>
             </div>
             <div class="item js-item works-img">
-              <img src="img/works.png" alt="works-img" />
+              <section id="works">
+                <div class="swiper">
+                  <!-- 必要に応じたwrapper -->
+                  <div class="swiper-wrapper">
+                    <!-- スライド -->
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                  </div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+                <img src="img/works.png" alt="works-img" />
+              </section>
             </div>
 
             <div class="item js-item contact-img">
@@ -139,5 +167,7 @@
         <p>&copy; 2024 HACHI</p>
       </footer>
     </div>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
