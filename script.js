@@ -35,7 +35,7 @@ window.addEventListener("load", function(){
           scale: 0, width: "40%", height: "50%", left: "5.5%", top: "35%",
         });
         gsap.set(".works-img", {
-          scale: 0, width: "45%", height: "50%",  left: "5.5%", top: "25%",
+          scale: 0, width: "45%", height: "50%",  left: "10.5%", top: "25%",
         });
         gsap.set(".contact-img", {
           scale: 0, width: "100%", height: "100%", left: "12.5%", top: "25%",
@@ -79,70 +79,54 @@ window.addEventListener("load", function(){
 
 // ナビゲーションから該当箇所へスクロール
 
+
+window.addEventListener('scroll',function(){
+  console.log(window.scrollY);
+});
+
 // DOM取得-TOP-
-// const $topimg = document.getElementById('topimg');
-// const $top = document.getElementById('top');     
+const $topimg = document.getElementById('topimg');    
+// id="topimg"を持つ要素がクリックされた場合
+$topimg.addEventListener('click',()=> {
+  // スクロール
+  window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+  });
+})
 
-// // id=top のブラウザの上からの位置を取得
-// const topTop = $top.getBoundingClientRect().top;
+// DOM取得-about
+const $aboutimg = document.getElementById('aboutimg');
+// id="text-link"を持つ要素がクリックされた場合
+$aboutimg.addEventListener('click',()=> {
+  
+  // スクロール
+  window.scrollTo({
+        top: 1850,
+        behavior: 'smooth'
+  });
+})
 
-// // id="topimg"を持つ要素がクリックされた場合
-// $topimg.addEventListener('click',()=> {
-
-//   // スクロール
-//   window.scrollTo({
-//         top: 0,
-//         behavior: 'smooth'
-//   });
-// })
-
-// // DOM取得-about
-// const $aboutimg = document.getElementById('aboutimg');
-// const $about = document.getElementById('about');     
-
-// // id=text のブラウザの上からの位置を取得
-// const aboutTop = $contact.getBoundingClientRect().top;
-
-// // id="text-link"を持つ要素がクリックされた場合
-// $aboutimg.addEventListener('click',()=> {
-
-//   // スクロール
-//   window.scrollTo({
-//         top: 1000,
-//         behavior: 'smooth'
-//   });
-// })
-
-// // DOM取得-works-
-// const $worksimg = document.getElementById('worksimg');
-// const $works = document.getElementById('works');     
-
-// // id=text のブラウザの上からの位置を取得
-// const worksTop = $contact.getBoundingClientRect().top;
-
-// // id="text-link"を持つ要素がクリックされた場合
-// $worksimg.addEventListener('click',()=> {
-
-//   // スクロール
-//   window.scrollTo({
-//         top: 2000,
-//         behavior: 'smooth'
-//   });
-// })
-
-// DOM取得
-const $contactimg = document.getElementById('contactimg');
-const $contact = document.getElementById('contact');     
-
-// id=contact のブラウザの上からの位置を取得
-const contactTop = $contact.getBoundingClientRect().top;
-
-// id="contactimg"を持つ要素がクリックされた場合
-$contactimg.addEventListener('click',()=> {
+// DOM取得-works-
+const $worksimg = document.getElementById('worksimg');
+// id="text-link"を持つ要素がクリックされた場合
+$worksimg.addEventListener('click',()=> {
 
   // スクロール
   window.scrollTo({
-        top: 4000,
+    top: 3450,
         behavior: 'smooth'
   });
+})
+    // DOM取得
+    const $contactimg = document.getElementById('contactimg');
+    
+    // id="contactimg"を持つ要素がクリックされた場合
+    $contactimg.addEventListener('click',()=> {
+    
+      // スクロール
+      window.scrollTo({
+            top: 4000,
+            behavior: 'smooth'
+      });
 })
