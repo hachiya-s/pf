@@ -35,7 +35,7 @@ window.addEventListener("load", function(){
           scale: 0, width: "40%", height: "50%", left: "5.5%", top: "35%",
         });
         gsap.set(".works-img", {
-          scale: 0, width: "45%", height: "50%",  left: "10.5%", top: "25%",
+          scale: 0, width: "45%", height: "50%",  left: "0.5%", top: "25%",
         });
         gsap.set(".contact-img", {
           scale: 0, width: "100%", height: "100%", left: "12.5%", top: "25%",
@@ -58,25 +58,32 @@ window.addEventListener("load", function(){
           .to(".present", { scale: 0.5, left: "30.5%", top: "-5%", duration: 1, zIndex: 100 },"-=0.5" )
           .to(".home-img", { scale: 2, left: "120.5%", top: "45%", duration: 1 }, "-=0.5")
           .to(".home-img", { opacity: 0, duration: 1 }, "-=0.2")
-          .to(".about-img", { scale: 2, left: "27.5%", top: "25%", duration: 2, },"-=1.5")
+          .to(".about-img", { scale: 1.3, left: "19%", top: "32%", duration: 2, },"-=1.5")
+          .to(".about-img", { scale: 1.3, left: "19%", top: "32%", duration: 5, })
+          .to(".about-img", { scale: 2, left: "19%", top: "32%", duration: 2, })
           .to(".about-img", { opacity: 0, duration: 2 }, "-=0.5")
-        
-          .to(".works-img", { scale: 2, left: "52.5%", top: "25%", duration: 1, zIndex: 300}, "-=0.5")
+          .to(".works-img", { scale: 1, left: "13%", top: "10%", duration: 1, zIndex: 400}, "-=0.5")
+          .to(".works-img", { scale: 1, left: "13%", top: "10%", duration: 5, zIndex: 400})
+          .to(".works-img", { scale: 2, left: "13%", top: "10%", duration: 1, zIndex: 400})
           .to(".works-img", { opacity: 0, duration: 0.2 }, "-=0.2")
-          .to(".contact-img", { scale: 0.8, left: "-5%", top: "5%", duration: 1, zIndex: 500 }, "-=0.5")
+          .to(".contact-img", { scale: 0.8, left: "-1.5%", top: "5%", duration: 1, zIndex: 500 }, "-=0")
       });
 
       
 
-    const swiper = new Swiper(".swiper", {
-        // ナビボタン
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev"
-        }
-      });
-
-
+      
+        const swiper = new Swiper(".swiper", {
+            direction: "vertical",
+            spaceBetween: 20,
+            slidesPerView: 1,
+            loop: true,
+           
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    
 // ナビゲーションから該当箇所へスクロール
 
 
@@ -130,3 +137,21 @@ $worksimg.addEventListener('click',()=> {
             behavior: 'smooth'
       });
 })
+
+const img = document.querySelector('.present img');
+        const startScroll = 400; // スクロール開始位置（px）
+        const minScale = 0.5; // 最小スケール値
+
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.scrollY;
+            
+            // スクロール位置が1000pxを超えた場合にスケールを計算
+            if (scrollPosition > startScroll) {
+                // スケールを計算し、最小スケール値を適用
+                const scale = Math.max(minScale, 1 - (scrollPosition - startScroll) / 1000);
+                img.style.transform = `scale(${scale})`;
+            } else {
+                // スクロール位置が1000px未満の場合は、スケールを1に設定
+                img.style.transform = 'scale(1)';
+            }
+        });

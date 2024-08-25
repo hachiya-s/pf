@@ -7,9 +7,11 @@ html {
   max-height: 700px;
 }
 
-/* p {
-  font-size: 100px;
-} */
+h2 {
+  color: #fff7b0;
+  font-size: 32px;
+  -webkit-text-stroke: 1px black;
+}
 
 a {
   text-decoration: none;
@@ -174,25 +176,24 @@ main {
 }
 
 /* TOP */
-/* .welcome {
-  margin-top: 150px;
-  margin-left: 50px;
+.present {
+  animation: fluffy 8s infinite;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease;
 }
-
-.home img {
-  position: relative;
-  top: 125px;
-  left: 25px;
-  width: 560px;
-  height: 560px;
+/* アニメーションの設定 */
+@keyframes fluffy {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }
-.present-top img {
-  width: 300px;
-  height: 300px;
-  position: relative;
-  bottom: 225px;
-  right: 400px;
-} */
 
 /* .area {
   overflow: hidden;
@@ -207,6 +208,7 @@ main {
 
 .welcome {
   position: absolute;
+  width: 90%;
 }
 
 .present {
@@ -236,13 +238,7 @@ main {
   height: 560px;
 }
 
-.about-img h2 {
-  color: #fff7b0;
-  font-size: 48px;
-  -webkit-text-stroke: 1px black;
-}
-
-.about-img p {
+p.dotgothic16-regular {
   width: 400px;
   font-size: 16px;
 }
@@ -265,19 +261,53 @@ main {
 
 #works {
   display: flex;
-  width: 100%;
-  height: 300px;
 }
 
-.swiper-slide {
-  /* スライドのサイズを調整、中身のテキスト配置調整、背景色 */
-  width: 100%;
-  height: 200px;
+.swiper h2 {
+  padding: 30px 0 90px;
 }
 
-.swiper-slide img {
-  /* スライドのサイズを調整、中身のテキスト配置調整、背景色 */
-  width: 100%;
+.swiper {
+  height: 475px;
+  width: min(100%, 640px);
+  margin-inline: auto;
+}
+@media screen and (max-width: 640px) {
+  .swiper {
+    height: 61vw;
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  margin: 0 auto;
+  right: 20px;
+  left: initial;
+  transform: rotate(90deg);
+}
+
+.swiper-button-prev {
+  top: 110px;
+  left: 20px;
+  z-index: 300;
+}
+
+.swiper-button-next {
+  top: initial;
+  bottom: 0;
+  left: 20px;
+  z-index: 300;
+}
+
+.worksimg img {
+  /* 家の画像 */
+  display: flex;
+  position: absolute;
+  padding-right: 120px;
+
+  left: 100%;
+  width: 560px;
+  height: 560px;
 }
 
 /* contact */
@@ -292,23 +322,34 @@ main {
   height: 560px;
 }
 
-.contact-img h2 {
-  color: #fff7b0;
-  font-size: 48px;
-  -webkit-text-stroke: 1px black;
-}
-
 #contact {
   display: block;
   text-align: left;
   padding-left: 20%;
-  padding-top: 5%;
+  /* padding-top: 5%; */
+  width: 600px;
 }
 
 .sent {
   text-align: center;
 }
 
+.sent-button {
+  width: 80px;
+  border-radius: 50px;
+}
+
+input {
+  border-width: thin;
+  box-shadow: 0px 5px 5px -5px gray;
+  width: 384px;
+}
+
+textarea {
+  border-width: thin;
+  box-shadow: 0px 5px 5px -5px;
+  width: 384px;
+}
 /* フッター */
 #footer {
   position: fixed; /* ←fixedで固定 */
