@@ -75,7 +75,7 @@ window.addEventListener("load", function(){
         const swiper = new Swiper(".swiper", {
             direction: "vertical",
             spaceBetween: 20,
-            slidesPerView: 1,
+            slidesPerView: 1, 
             loop: true,
            
             navigation: {

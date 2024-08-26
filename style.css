@@ -170,8 +170,6 @@ li {
 
 /* メイン */
 main {
-  /* display: flex;
-  padding: 0 100px; */
   background-color: #c5f5ff;
 }
 
@@ -206,15 +204,17 @@ main {
   height: 100vh;
 }
 
-.welcome {
+.welcome img {
   position: absolute;
-  width: 90%;
+  margin: 10% 0 0 10%;
+  width: 40%;
+ 
 }
 
 .present {
   position: absolute;
   top: 50%;
-  left: 25;
+  left: 25px;
   z-index: 10;
   width: 460px;
   height: 460px;
@@ -349,6 +349,7 @@ textarea {
   border-width: thin;
   box-shadow: 0px 5px 5px -5px;
   width: 384px;
+  height: 240px;
 }
 /* フッター */
 #footer {
@@ -360,4 +361,123 @@ textarea {
   justify-content: center;
   background: #c5f5ff;
   padding: 1em;
+}
+
+/*-------------------------------------------
+SP
+-------------------------------------------*/
+@media screen and (max-width: 500px) {
+  h2 {
+    color: #fff7b0;
+    font-size: 16px;
+    -webkit-text-stroke: 1px black;
+    width: 400px;
+  }
+
+  p.dotgothic16-regular {
+    font-size: 8px;
+    width: 280px;  　　/* pの折り返す範囲 */
+  }
+
+
+
+  .loader {
+    width: 400px;
+    height: 170px;
+    background: url("img/now loading.png") no-repeat;
+    opacity: 0;
+    animation: blink 1.5s infinite linear;
+  }
+
+  #header {
+    padding: 10px;
+  }
+
+  .home-img {
+    margin-top: 300px;
+    width: 560px;
+    height: 560px;
+  }
+
+  .present {
+    animation: fluffy 8s infinite;
+    position: fixed;
+    margin-top: 120px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s ease;
+  }
+  #about {
+    width: 400px;
+    height: 600px;
+  }
+  .item {
+    display: block;
+    width: 600px;
+    height: 600px;
+  }
+
+  .about-img {  
+    padding-right: 0;
+    width: 200px;
+    height: 200px;
+  }
+
+  #works {
+    display: block;
+    width: 400px;
+  }
+
+  .worksimg img {
+    /* 家の画像 */
+    position: absolute;
+    top: 20%;
+    padding: 0;
+    z-index: 200;
+    width: 240px;
+    height: 240px;
+  }
+  
+ 
+  
+  .swiper {
+    height: 775px;
+    padding-top: 50%;
+    width: min(100%, 640px);
+    margin-inline: auto;
+  }
+
+  .swiper-button-prev {
+    top: 290px;
+    left: 20px;
+    z-index: 300;
+  }
+  
+  .swiper-button-next {
+    top: initial;
+    bottom: 150px;
+    left: 20px;
+    z-index: 300;
+  }
+
+
+
+  #contact {
+    display: block;
+    text-align: left;
+   
+    width: 600px;
+  }
+
+  textarea {
+    border-width: thin;
+    box-shadow: 0px 5px 5px -5px;
+    width: 384px;
+    height: 136px;
+  }
+
+  .sent {
+    padding-right: 20%;
+  }
+
 }
