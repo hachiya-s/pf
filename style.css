@@ -79,8 +79,6 @@ li {
   background: #c5f5ff;
   padding: 0px 100px;
   top: 0;
-  /* box-sizing: border-box; */
-  /* left: 0; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -177,7 +175,7 @@ main {
 .present {
   animation: fluffy 8s infinite;
   position: fixed;
-  top: 50%;
+  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
   transition: transform 0.2s ease;
@@ -211,17 +209,18 @@ main {
  
 }
 
-.present {
+.present img {
   position: absolute;
-  top: 50%;
+  top: 5%;
   left: 25px;
-  z-index: 10;
+  z-index: 100;
   width: 460px;
-  height: 460px;
+  height: auto;
 }
 .home-img {
   position: absolute;
-  top: 20%;
+  padding-top: 5%;
+  
   left: 50%;
   z-index: 0;
   width: 560px;
@@ -248,16 +247,21 @@ p.dotgothic16-regular {
   padding-left: 10%;
 }
 
+#about h2 {
+  padding-top: 30px;
+
+}
+
 /* works */
 .works-img {
   display: flex;
   position: absolute;
-  padding-right: 120px;
   top: 20%;
   left: 50%;
   width: 560px;
   height: 560px;
 }
+
 
 #works {
   display: flex;
@@ -278,6 +282,10 @@ p.dotgothic16-regular {
   }
 }
 
+.swiper-slide img {
+  width: 80%;
+}
+
 .swiper-button-prev,
 .swiper-button-next {
   margin: 0 auto;
@@ -288,17 +296,21 @@ p.dotgothic16-regular {
 
 .swiper-button-prev {
   top: 110px;
-  left: 20px;
+  left: -90px;
   z-index: 300;
+  color: #fff7b0;
+  -webkit-text-stroke: 1px rgb(118, 118, 118);
+  font-family: "DotGothic16", sans-serif;
 }
 
 .swiper-button-next {
   top: initial;
   bottom: 0;
-  left: 20px;
+  left: -90px;
   z-index: 300;
+  color: #fff7b0;
+  -webkit-text-stroke:1px rgb(118, 118, 118);
 }
-
 .worksimg img {
   /* 家の画像 */
   display: flex;
@@ -325,8 +337,7 @@ p.dotgothic16-regular {
 #contact {
   display: block;
   text-align: left;
-  padding-left: 20%;
-  /* padding-top: 5%; */
+  padding: 5% 8% 5% 8%;
   width: 600px;
 }
 
@@ -370,39 +381,49 @@ SP
   h2 {
     color: #fff7b0;
     font-size: 16px;
-    -webkit-text-stroke: 1px black;
-    width: 400px;
+    -webkit-text-stroke: 0.5px black;
+    width: 500px;
   }
 
   p.dotgothic16-regular {
     font-size: 8px;
-    width: 280px;  　　/* pの折り返す範囲 */
+    width: 200px;  　　/* pの折り返す範囲 */
   }
 
 
 
   .loader {
-    width: 400px;
-    height: 170px;
+    width: 350px;
+    height: 100px;
     background: url("img/now loading.png") no-repeat;
     opacity: 0;
     animation: blink 1.5s infinite linear;
+    background-size: contain;
   }
 
   #header {
-    padding: 10px;
+    padding: 5px;
   }
 
-  .home-img {
-    margin-top: 300px;
-    width: 560px;
-    height: 560px;
+  #header img {
+    height: 20px;
+  }
+
+  .welcome img {
+    position: absolute;
+    margin: 40% 0 0 10%;
+    width: 80%;
+  }
+
+  .home-img{
+    margin-top: 180px;
+    width: 500px;
   }
 
   .present {
     animation: fluffy 8s infinite;
     position: fixed;
-    margin-top: 120px;
+    margin-top: 100px;
     left: 50%;
     transform: translate(-50%, -50%);
     transition: transform 0.2s ease;
@@ -413,7 +434,7 @@ SP
   }
   .item {
     display: block;
-    width: 600px;
+    width: 400px;
     height: 600px;
   }
 
@@ -425,38 +446,42 @@ SP
 
   #works {
     display: block;
-    width: 400px;
+    width: 280px;
+    
   }
 
   .worksimg img {
     /* 家の画像 */
     position: absolute;
-    top: 20%;
-    padding: 0;
+    top: 10%;
+    padding-right: 10px;
     z-index: 200;
-    width: 240px;
-    height: 240px;
+    width: 340px;
+    height: auto;
   }
   
- 
   
   .swiper {
     height: 775px;
-    padding-top: 50%;
+    padding-top: 30%;
     width: min(100%, 640px);
     margin-inline: auto;
   }
 
+  .swiper-slide {
+    left: 24px;
+  }
+
   .swiper-button-prev {
-    top: 290px;
-    left: 20px;
+    top: 185px;
+    left: 24px;
     z-index: 300;
   }
   
   .swiper-button-next {
     top: initial;
-    bottom: 150px;
-    left: 20px;
+    bottom: 360px;
+    left: 24px;
     z-index: 300;
   }
 
@@ -465,19 +490,44 @@ SP
   #contact {
     display: block;
     text-align: left;
-   
+    padding-left: 40px;
     width: 600px;
+  }
+
+  #contact p {
+    width: 400px;
+  }
+
+  input {
+    width: 320px;
+    height: 16px;
   }
 
   textarea {
     border-width: thin;
     box-shadow: 0px 5px 5px -5px;
-    width: 384px;
-    height: 136px;
+    width: 320px;
+    height: 80px;
   }
 
   .sent {
     padding-right: 20%;
+    position: fixed;
+    padding-left: 120px;
+  }
+
+ 
+
+  input[type="submit"] {
+    font-size: 8px;
+  }
+
+  .dotgothic16-regular span {
+    font-size: 8px;
+  }
+
+  .swiper h2 {
+    padding: 40px 0 90px;
   }
 
 }

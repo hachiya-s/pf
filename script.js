@@ -58,13 +58,13 @@ window.addEventListener("load", function(){
           .to(".present", { scale: 0.5, left: "30.5%", top: "-5%", duration: 1, zIndex: 100 },"-=0.5" )
           .to(".home-img", { scale: 2, left: "120.5%", top: "45%", duration: 1 }, "-=0.5")
           .to(".home-img", { opacity: 0, duration: 1 }, "-=0.2")
-          .to(".about-img", { scale: 1.3, left: "19%", top: "32%", duration: 2, },"-=1.5")
-          .to(".about-img", { scale: 1.3, left: "19%", top: "32%", duration: 5, })
-          .to(".about-img", { scale: 2, left: "19%", top: "32%", duration: 2, })
+          .to(".about-img", { scale: 1.3, left: "19%", top: "30%", duration: 2, },"-=1.5")
+          .to(".about-img", { scale: 1.3, left: "19%", top: "30%", duration: 5, })
+          .to(".about-img", { scale: 2, left: "19%", top: "30%", duration: 2, })
           .to(".about-img", { opacity: 0, duration: 2 }, "-=0.5")
-          .to(".works-img", { scale: 1, left: "13%", top: "10%", duration: 1, zIndex: 400}, "-=0.5")
-          .to(".works-img", { scale: 1, left: "13%", top: "10%", duration: 5, zIndex: 400})
-          .to(".works-img", { scale: 2, left: "13%", top: "10%", duration: 1, zIndex: 400})
+          .to(".works-img", { scale: 1, left: "13%", top: "20%", duration: 1, zIndex: 400}, "-=0.5")
+          .to(".works-img", { scale: 1, left: "13%", top: "20%", duration: 5, zIndex: 400})
+          .to(".works-img", { scale: 2, left: "13%", top: "20%", duration: 1, zIndex: 400})
           .to(".works-img", { opacity: 0, duration: 0.2 }, "-=0.2")
           .to(".contact-img", { scale: 0.8, left: "-1.5%", top: "5%", duration: 1, zIndex: 500 }, "-=0")
       });
@@ -139,7 +139,7 @@ $worksimg.addEventListener('click',()=> {
 })
 
 const img = document.querySelector('.present img');
-        const startScroll = 400; // スクロール開始位置（px）
+        const startScroll = 300; // スクロール開始位置（px）
         const minScale = 0.5; // 最小スケール値
 
         window.addEventListener('scroll', () => {
@@ -148,7 +148,7 @@ const img = document.querySelector('.present img');
             // スクロール位置が1000pxを超えた場合にスケールを計算
             if (scrollPosition > startScroll) {
                 // スケールを計算し、最小スケール値を適用
-                const scale = Math.max(minScale, 1 - (scrollPosition - startScroll) / 1000);
+                const scale = Math.max(minScale, 1 - (scrollPosition - startScroll) / 300);
                 img.style.transform = `scale(${scale})`;
             } else {
                 // スクロール位置が1000px未満の場合は、スケールを1に設定
