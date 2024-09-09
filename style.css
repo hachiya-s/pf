@@ -11,6 +11,7 @@ h2 {
   color: #fff7b0;
   font-size: 32px;
   -webkit-text-stroke: 1px black;
+  width: 500px;
 }
 
 a {
@@ -259,7 +260,7 @@ p.dotgothic16-regular {
   top: 20%;
   left: 50%;
   width: 560px;
-  height: 560px;
+  height:auto;
 }
 
 
@@ -268,6 +269,7 @@ p.dotgothic16-regular {
 }
 
 .swiper h2 {
+  font-size: 40px;
   padding: 30px 0 90px;
 }
 
@@ -295,7 +297,7 @@ p.dotgothic16-regular {
 }
 
 .swiper-button-prev {
-  top: 110px;
+  top: 130px;
   left: -90px;
   z-index: 300;
   color: #fff7b0;
@@ -315,11 +317,8 @@ p.dotgothic16-regular {
   /* 家の画像 */
   display: flex;
   position: absolute;
-  padding-right: 120px;
+  left: 80%;
 
-  left: 100%;
-  width: 560px;
-  height: 560px;
 }
 
 /* contact */
@@ -337,8 +336,22 @@ p.dotgothic16-regular {
 #contact {
   display: block;
   text-align: left;
-  padding: 5% 8% 5% 8%;
+  padding: 8% 10% 5% 0%;
   width: 600px;
+}
+
+#contact h2 {
+  font-size: 48px;
+  width: 700px;
+  -webkit-text-stroke: 1.2px black;
+}
+
+#contact p {
+  width: 700px;
+}
+
+form {
+  padding-left: 64px;
 }
 
 .sent {
@@ -360,7 +373,7 @@ textarea {
   border-width: thin;
   box-shadow: 0px 5px 5px -5px;
   width: 384px;
-  height: 240px;
+  height: 200px;
 }
 /* フッター */
 #footer {
@@ -452,28 +465,36 @@ SP
 
   .worksimg img {
     /* 家の画像 */
-    position: absolute;
+    position: fixed;
     top: 10%;
-    padding-right: 10px;
-    z-index: 200;
-    width: 340px;
-    height: auto;
+    left: 40%;
+    
+    
   }
   
   
   .swiper {
+    display: block;
     height: 775px;
     padding-top: 30%;
     width: min(100%, 640px);
     margin-inline: auto;
   }
 
+  .swiper h2 {
+    padding: 130px 0 90px;
+    font-size: 16px;
+    -webkit-text-stroke: 0.5px black;
+    width: 500px;
+  }
+
   .swiper-slide {
     left: 24px;
+    top: -72px;
   }
 
   .swiper-button-prev {
-    top: 185px;
+    top: 220px;
     left: 24px;
     z-index: 300;
   }
@@ -490,30 +511,36 @@ SP
   #contact {
     display: block;
     text-align: left;
-    padding-left: 40px;
-    width: 600px;
+    padding-left: 50px;
+    width: 400px;
+  }
+  #contact h2 {
+    font-size: 24px;
+    width: 400px;
+    -webkit-text-stroke: 0.5px black;
   }
 
-  #contact p {
+  #contact p { 
     width: 400px;
   }
 
   input {
-    width: 320px;
+    width: 276px;
     height: 16px;
+
   }
 
   textarea {
     border-width: thin;
     box-shadow: 0px 5px 5px -5px;
-    width: 320px;
+    width: 276px;
     height: 80px;
   }
 
   .sent {
-    padding-right: 20%;
     position: fixed;
-    padding-left: 120px;
+    bottom: 12%;
+    left: 41%;
   }
 
  
@@ -526,8 +553,11 @@ SP
     font-size: 8px;
   }
 
-  .swiper h2 {
-    padding: 40px 0 90px;
+
+  
+  form {
+    padding: 0;
   }
+
 
 }
