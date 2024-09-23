@@ -198,8 +198,8 @@ main {
   }
 }
 
-.area .js-area {
-  overflow: scroll;
+.js-area {
+  overflow: hidden;
 }
 
 /* ↑スクロールに悪さしてそう */
