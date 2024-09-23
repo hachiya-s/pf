@@ -198,9 +198,9 @@ main {
   }
 }
 
-.area {
+/* .area {
   overflow: scroll;
-}
+} */
 
 /* ↑スクロールに悪さしてそう */
 
@@ -345,6 +345,7 @@ p.dotgothic16-regular {
   text-align: left;
   padding: 5%;
   width: 600px;
+  overflow: scroll;
 }
 
 #contact h2 {
