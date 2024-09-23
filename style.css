@@ -9,7 +9,7 @@ html {
   scroll-behavior: smooth;
   font-size: 100%;
   max-width: 1920px;
-  max-height: 700px;
+  /* max-height: 700px; */
 }
 
 h2 {
@@ -176,7 +176,6 @@ li {
 /* メイン */
 main {
   background-color: #c5f5ff;
-  overflow: hidden;
 }
 
 /* TOP */
@@ -199,9 +198,9 @@ main {
   }
 }
 
-/* .area {
-  overflow: hidden;
-} */
+.area {
+  overflow: scroll;
+}
 
 /* ↑スクロールに悪さしてそう */
 
@@ -227,7 +226,6 @@ main {
 .home-img {
   position: absolute;
   padding-top: 3%;
-
   left: 50%;
   z-index: 0;
   width: 560px;
@@ -345,7 +343,7 @@ p.dotgothic16-regular {
 #contact {
   display: block;
   text-align: left;
-  padding: 5% 
+  padding: 5%;
   width: 600px;
 }
 
@@ -359,6 +357,11 @@ p.dotgothic16-regular {
   width: 700px;
 }
 
+form {
+  position: absolute;
+  top: 25%;
+}
+
 .sent {
   position: absolute;
   left: 20%;
@@ -369,15 +372,11 @@ p.dotgothic16-regular {
   border-radius: 50px;
 }
 
-form {
-  position: absolute;
-  top: 15%;
-}
-
 input {
   border-width: thin;
   box-shadow: 0px 5px 5px -5px gray;
   width: 384px;
+  font-family: "DotGothic16";
 }
 
 textarea {
@@ -520,7 +519,11 @@ SP
   .swiper-slide {
     left: 24px;
     top: -72px;
-    z-index: 200;
+    z-index: 10;
+  }
+
+  .swiper-slide img {
+    z-index: 10;
   }
 
   .swiper-button-prev {
@@ -554,7 +557,7 @@ SP
 
   form {
     position: absolute;
-    padding-top: 50%;
+    padding-top: 45%;
   }
 
   input {
@@ -562,26 +565,26 @@ SP
     height: 16px;
   }
 
-  
   textarea {
     border-width: thin;
     box-shadow: 0px 5px 5px -5px;
     width: 276px;
     height: 80px;
   }
-  
+
   .sent {
     position: absolute;
     top: 100%;
     left: 25%;
   }
-  
+
   .sent :last-child {
-    background-color: azure;
+    background-color: #e4e2e2;
+    color: #000000;
+    border: 0.5px solid #000000;
   }
 
   input[type="submit"] {
-    appearance: none;
     font-size: 8px;
   }
 
