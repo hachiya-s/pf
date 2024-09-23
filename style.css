@@ -1,4 +1,9 @@
 @charset "UTF-8";
+/*
+Theme Name: HACHI's Portfolio Website
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
 
 html {
   scroll-behavior: smooth;
@@ -103,30 +108,31 @@ li {
 
 /* スクロールの矢印たち */
 
-.scrolldown4 {
+.scrolldown {
   /*描画位置※位置は適宜調整してください*/
   position: absolute;
   bottom: 1%;
-  right: 50%;
+  left: 10%;
   /*矢印の動き1秒かけて永遠にループ*/
   animation: arrowmove 1s ease-in-out infinite;
+  z-index: 200;
 }
 
 /*下からの距離が変化して全体が下→上→下に動く*/
 @keyframes arrowmove {
   0% {
-    bottom: 5%;
+    bottom: 8%;
   }
   50% {
-    bottom: 6%;
+    bottom: 9%;
   }
   100% {
-    bottom: 5%;
+    bottom: 8%;
   }
 }
 
 /*Scrollテキストの描写*/
-.scrolldown4 span {
+.scrolldown span {
   /*描画位置*/
   position: absolute;
   left: -20px;
@@ -142,7 +148,7 @@ li {
 }
 
 /* 矢印の描写 */
-.scrolldown4:before {
+.scrolldown:before {
   content: "";
   /*描画位置*/
   position: absolute;
@@ -155,7 +161,7 @@ li {
   transform: skewX(-31deg);
 }
 
-.scrolldown4:after {
+.scrolldown:after {
   content: "";
   /*描画位置*/
   position: absolute;
@@ -170,6 +176,7 @@ li {
 /* メイン */
 main {
   background-color: #c5f5ff;
+  overflow: hidden;
 }
 
 /* TOP */
@@ -207,7 +214,6 @@ main {
   position: absolute;
   margin: 10% 0 0 10%;
   width: 40%;
- 
 }
 
 .present img {
@@ -220,22 +226,22 @@ main {
 }
 .home-img {
   position: absolute;
-  padding-top: 5%;
-  
+  padding-top: 3%;
+
   left: 50%;
   z-index: 0;
   width: 560px;
-  height: 560px;
+  height: auto;
 }
 .about-img {
   display: flex;
   position: absolute;
-  padding-right: 160px;
+  /* padding-right: 160px; */
   top: 20%;
   left: 50%;
   z-index: 0;
   width: 560px;
-  height: 560px;
+  height: auto;
 }
 
 p.dotgothic16-regular {
@@ -250,22 +256,21 @@ p.dotgothic16-regular {
 
 #about h2 {
   padding-top: 30px;
-
 }
 
 /* works */
 .works-img {
   display: flex;
   position: absolute;
-  top: 20%;
+  top: 0%;
   left: 50%;
-  width: 560px;
-  height:auto;
+  width: 520px;
+  height: auto;
 }
-
 
 #works {
   display: flex;
+  height: 700px;
 }
 
 .swiper h2 {
@@ -286,6 +291,9 @@ p.dotgothic16-regular {
 
 .swiper-slide img {
   width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .swiper-button-prev,
@@ -311,14 +319,15 @@ p.dotgothic16-regular {
   left: -90px;
   z-index: 300;
   color: #fff7b0;
-  -webkit-text-stroke:1px rgb(118, 118, 118);
+  -webkit-text-stroke: 1px rgb(118, 118, 118);
 }
-.worksimg img {
+.worksimg {
   /* 家の画像 */
-  display: flex;
   position: absolute;
-  left: 80%;
-
+  top: 20%;
+  right: -60%;
+  width: 70%;
+  height: auto;
 }
 
 /* contact */
@@ -336,7 +345,7 @@ p.dotgothic16-regular {
 #contact {
   display: block;
   text-align: left;
-  padding: 8% 10% 5% 0%;
+  padding: 5% 
   width: 600px;
 }
 
@@ -350,17 +359,19 @@ p.dotgothic16-regular {
   width: 700px;
 }
 
-form {
-  padding-left: 64px;
-}
-
 .sent {
-  text-align: center;
+  position: absolute;
+  left: 20%;
 }
 
 .sent-button {
   width: 80px;
   border-radius: 50px;
+}
+
+form {
+  position: absolute;
+  top: 15%;
 }
 
 input {
@@ -400,10 +411,30 @@ SP
 
   p.dotgothic16-regular {
     font-size: 8px;
-    width: 200px;  　　/* pの折り返す範囲 */
+    width: 200px; /* pの折り返す範囲 */
   }
 
+  .scrolldown {
+    /*描画位置※位置は適宜調整してください*/
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    /*矢印の動き1秒かけて永遠にループ*/
+    animation: arrowmove 1s ease-in-out infinite;
+  }
 
+  /*下からの距離が変化して全体が下→上→下に動く*/
+  @keyframes arrowmove {
+    0% {
+      bottom: 5%;
+    }
+    50% {
+      bottom: 6%;
+    }
+    100% {
+      bottom: 5%;
+    }
+  }
 
   .loader {
     width: 350px;
@@ -416,10 +447,11 @@ SP
 
   #header {
     padding: 5px;
+    width: 100vw;
   }
 
   #header img {
-    height: 20px;
+    height: auto;
   }
 
   .welcome img {
@@ -428,7 +460,7 @@ SP
     width: 80%;
   }
 
-  .home-img{
+  .home-img {
     margin-top: 180px;
     width: 500px;
   }
@@ -451,7 +483,7 @@ SP
     height: 600px;
   }
 
-  .about-img {  
+  .about-img {
     padding-right: 0;
     width: 200px;
     height: 200px;
@@ -460,7 +492,7 @@ SP
   #works {
     display: block;
     width: 280px;
-    
+    height: 100px;
   }
 
   .worksimg img {
@@ -468,11 +500,8 @@ SP
     position: fixed;
     top: 10%;
     left: 40%;
-    
-    
   }
-  
-  
+
   .swiper {
     display: block;
     height: 775px;
@@ -491,6 +520,7 @@ SP
   .swiper-slide {
     left: 24px;
     top: -72px;
+    z-index: 200;
   }
 
   .swiper-button-prev {
@@ -498,15 +528,13 @@ SP
     left: 24px;
     z-index: 300;
   }
-  
+
   .swiper-button-next {
     top: initial;
     bottom: 360px;
     left: 24px;
     z-index: 300;
   }
-
-
 
   #contact {
     display: block;
@@ -520,44 +548,44 @@ SP
     -webkit-text-stroke: 0.5px black;
   }
 
-  #contact p { 
+  #contact p {
     width: 400px;
+  }
+
+  form {
+    position: absolute;
+    padding-top: 50%;
   }
 
   input {
     width: 276px;
     height: 16px;
-
   }
 
+  
   textarea {
     border-width: thin;
     box-shadow: 0px 5px 5px -5px;
     width: 276px;
     height: 80px;
   }
-
+  
   .sent {
-    position: fixed;
-    bottom: 12%;
-    left: 41%;
+    position: absolute;
+    top: 100%;
+    left: 25%;
+  }
+  
+  .sent :last-child {
+    background-color: azure;
   }
 
- 
-
   input[type="submit"] {
+    appearance: none;
     font-size: 8px;
   }
 
   .dotgothic16-regular span {
     font-size: 8px;
   }
-
-
-  
-  form {
-    padding: 0;
-  }
-
-
 }
